@@ -1,0 +1,115 @@
+POST http://localhost:3000/api/v1/users
+Content-Type: application/json
+
+{
+    "username": "kebe",
+    "email": "kebe@gmail.com",
+    "password": "12345"
+}
+###
+
+POST http://localhost:3000/api/v1/users/login
+Content-Type: application/json
+
+{
+   "email": "bininahu12@gmail.com",
+    "password": "12345689"
+}
+###
+
+POST http://localhost:3000/api/v1/users/logout
+###
+
+GET http://localhost:3000/api/v1/users//profile
+###
+
+PUT http://localhost:3000/api/v1/users//profile
+Content-Type: application/json
+
+{
+   "email": "kebede@gmail.com",
+    "password": "1234567"
+}
+###
+
+POST http://localhost:3000/api/v1/genre
+Content-Type: application/json
+
+{
+  "name":"Actionn"
+}
+###
+
+PUT http://localhost:3000/api/v1/genre/668ed9d12b5effa648424147
+Content-Type: application/json
+
+{
+  "name":""
+}
+###
+
+DELETE http://localhost:3000/api/v1/genre/668f770b00cc98597e305fb1
+###
+
+GET http://localhost:3000/api/v1/genre/genres
+###
+
+GET http://localhost:3000/api/v1/genre/668edc48c42fba58a7681065
+###
+
+POST http://localhost:3000/api/v1/movies/create-movie
+Content-Type: application/json
+
+{
+    "name": "john wick",
+    "image": "./image3.png",
+    "year":"2022",
+    "genre":"668f76ec00cc98597e305fa7",
+    "detail":"the best action movie ever",
+    "cast":["john","doe","alex"]
+}
+###
+
+GET http://localhost:3000/api/v1/movies/all-movies
+###
+
+GET http://localhost:3000/api/v1/movies/specific-movie/6692b515da03cb5aab8659f4
+###
+
+PUT http://localhost:3000/api/v1/movies/update-movie/6692b441da03cb5aab8659f1
+Content-Type: application/json
+
+{
+    "name": "x-mens"
+}
+###
+
+POST http://localhost:3000/api/v1/movies/6692b537da03cb5aab8659f7/reviews
+Content-Type: application/json
+
+{
+  "rating":3,
+  "comment":"one of the cool movie ever"
+}
+###
+
+DELETE http://localhost:3000/api/v1/movies/delete-movie/6692b515da03cb5aab8659f4
+###
+
+DELETE http://localhost:3000/api/v1/movies/delete-comment
+Content-Type: application/json
+
+{
+  "movieId":"6692b441da03cb5aab8659f1",
+  "reviewId":"6693bbb29500e7beaf302102"
+}
+###
+
+GET http://localhost:3000/api/v1/movies/new-movie
+###
+
+GET http://localhost:3000/api/v1/movies/top-movies
+###
+
+GET http://localhost:3000/api/v1/movies/random-movies
+###
