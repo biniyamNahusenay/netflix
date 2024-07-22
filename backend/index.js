@@ -25,9 +25,9 @@ app.use("/api/v1/upload",uploadRoutes)
 
 const __dirname = path.resolve()
 app.use("/uploads",express.static(path.join(__dirname + "/uploads")))
-app.use(express.static(path.join(__dirname,'/frontend/dist')));
+app.use(express.static(path.join(__dirname,'/frontend')));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
 
 app.listen(PORT,()=>console.log(`server is running on port ${PORT}`))
